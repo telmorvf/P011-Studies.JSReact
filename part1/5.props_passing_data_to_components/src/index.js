@@ -8,7 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <p>teste 1 index.jx</p>
+
   </React.StrictMode>
 );
 
