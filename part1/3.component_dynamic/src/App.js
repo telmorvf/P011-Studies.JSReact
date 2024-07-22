@@ -3,7 +3,7 @@ import './App.css';
 
 const App = () => {
   const now = new Date()
-  const a = 15
+  const a = 10
   const b = 20
   console.log(now, a+b)
 
