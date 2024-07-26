@@ -9,25 +9,21 @@ import './App.css'
     const [right, setRight] = useState(0)
     const [allClicks, setAll] = useState([])
     const [total, setTotal] = useState(0)
-    
-    const handZeroClick = () =>{
-
-    }
-
+  
     const handleLeftClick = () => {
-      setAll(allClicks.concat('L'))
-      const updatedLeft = left + 1
-      setLeft(updatedLeft)
-      setTotal(updatedLeft + right) 
-    }
-  
-    const handleRightClick = () => {
-      setAll(allClicks.concat('R'))
-      const updateRight = right + 1
-      setRight(updateRight)
-      setTotal(updateRight + left)
-    }
-  
+        setAll(allClicks.concat('L'))
+        const updatedLeft = left + 1
+        setLeft(updatedLeft)
+        setTotal(updatedLeft + right) 
+      }
+ 
+      const handleRightClick = () => {
+        setAll(allClicks.concat('R'))
+        const updatedRight = right + 1
+        setRight(updatedRight)
+        setTotal(updatedRight + left) 
+      }
+
     return (
       <div>
         {left}
@@ -37,7 +33,7 @@ import './App.css'
   
         <p>{allClicks.join(' ')}</p>
         <p>total {total}</p>
-        <button onClick={handleRightClick}>right</button>
+        {console.log(allClicks)}
       </div>
     )
   }

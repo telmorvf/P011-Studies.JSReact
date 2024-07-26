@@ -30,6 +30,7 @@ import './App.css'
         {right}
   
         <p>{allClicks.join(' ')}</p>
+        {console.log(allClicks)}
       </div>
     )
   }

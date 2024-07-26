@@ -3,6 +3,11 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+
+
+
+
+// Este é o lugar correto para definir um componente
 const Display = props => <div>{props.value}</div>
 
 const Button = (props) => (
@@ -12,6 +17,9 @@ const Button = (props) => (
 )
 
 const App = () => {
+  // Não defina um componente dentro de outro componente
+  // const Display = props => <div>{props.value}</div>
+  
   const [value, setValue] = useState(10)
 
   const setToValue = newValue => {
