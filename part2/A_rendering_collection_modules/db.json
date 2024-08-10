@@ -3,7 +3,7 @@
     {
       "id": "1",
       "content": ".json HTML é fácil",
-      "important": true
+      "important": false
     },
     {
       "id": "2",
@@ -13,11 +13,11 @@
     {
       "id": "3",
       "content": ".json GET e POST são os métodos mais importantes do protocolo HTTP",
-      "important": true
+      "important": false
     },
     {
       "id": "080c",
-      "content": ".json via front-end via localhost:5173 ",
+      "content": ".json telmo via front-end via localhost:5173 ",
       "important": false
     }
   ]
