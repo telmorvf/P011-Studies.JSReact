@@ -11,19 +11,14 @@ const create = newObject => {
   return request.then(response => response.data)
 }
 
-const update = (id, newObject) => {
+const update1 = (id, newObject) => {
   const request = axios.put(`${baseUrl}/${id}`, newObject)
   return request.then(response => response.data)
 }
 
-const getAll1 = () => {
-    const request = axios.get(baseUrl)
-    const nonExisting = {
-      id: 10000,
-      content: 'This note is not saved to server',
-      important: true,
-    }
-    return request.then(response => response.data.concat(nonExisting))
+const update = (id, newObject) => {
+  const request = axios.put(`${baseUrl}/100`, newObject)
+  return request.then(response => response.data)
 }
 
 // export default { 
