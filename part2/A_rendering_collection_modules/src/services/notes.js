@@ -11,12 +11,12 @@ const create = newObject => {
   return request.then(response => response.data)
 }
 
-const update1 = (id, newObject) => {
+const update = (id, newObject) => {
   const request = axios.put(`${baseUrl}/${id}`, newObject)
   return request.then(response => response.data)
 }
 
-const update = (id, newObject) => {
+const updateOLD = (id, newObject) => {
   const request = axios.put(`${baseUrl}/100`, newObject)
   return request.then(response => response.data)
 }
