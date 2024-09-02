@@ -1,14 +1,12 @@
 import { useState } from 'react'
-import './App.css'
 
-
-const Display = ( {counter} ) => {
+const Display = ({ counter }) => {
   return (
     <div>{counter}</div>
   )
 }
 
-const Button = ({onClick, text}) => {
+const Button = ({ onClick, text }) => {
   return (
     <button onClick={onClick}>
       {text}
@@ -17,7 +15,7 @@ const Button = ({onClick, text}) => {
 }
 
 
-const App = () => {
+const H_ChangesInStatCauseRendering = () => {
   const [counter, setCounter] = useState(0)
   console.log('rendering with counter value', counter)
 
@@ -26,7 +24,7 @@ const App = () => {
     setCounter(counter + 1)
   }
 
-  const decreaseByOne = () => { 
+  const decreaseByOne = () => {
     console.log('decreasing, value before', counter)
     setCounter(counter - 1)
   }
@@ -38,11 +36,15 @@ const App = () => {
 
   return (
     <div>
+      <hr />
+      <h2>= H_ChangesInStatCauseRendering =</h2>
+
       <Display counter={counter} />
+      <Button onClick={decreaseByOne} text="minus" />
       <Button onClick={increaseByOne} text="plus" />
       <Button onClick={setToZero} text="zero" />
-      <Button onClick={decreaseByOne} text="minus" />
+
     </div>
   )
-} 
-export default App
+}
+export default H_ChangesInStatCauseRendering

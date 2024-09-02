@@ -1,9 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
-
+import A_ComplexState from './components/A_ComplexState'
 
 
 
@@ -19,7 +17,7 @@ const Button = (props) => (
 const App = () => {
   // Não defina um componente dentro de outro componente
   // const Display = props => <div>{props.value}</div>
-  
+
   const [value, setValue] = useState(10)
 
   const setToValue = newValue => {
@@ -28,7 +26,13 @@ const App = () => {
   }
 
   return (
+
     <div>
+
+      <h1>==== Part 1 - Introduction to React ====</h1>
+      <h1>== D - A More complex state, debugging React apps ==</h1>
+
+      <hr />
       <Display value={value} />
       <Button handleClick={() => setToValue(1000)} text="thousand" />
       <Button handleClick={() => setToValue(0)} text="reset" />

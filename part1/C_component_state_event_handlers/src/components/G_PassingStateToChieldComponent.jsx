@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 
 
 const Display = (props) => {
@@ -16,8 +15,8 @@ const Button = (props) => {
   )
 }
 
-const App = () => {
-  const [ counter, setCounter ] = useState(0)
+const G_PassingStateToChieldComponent = () => {
+  const [counter, setCounter] = useState(0)
 
   const increaseByOne = () => setCounter(counter + 1)
   const decreaseByOne = () => setCounter(counter - 1)
@@ -25,22 +24,27 @@ const App = () => {
 
   return (
     <div>
+      <hr />
+      <h2>= G_PassingStateToChieldComponent =</h2>
 
-      <Display counter={counter}/>
+      <Display counter={counter} />
+
+      <Button
+        onClick={decreaseByOne}
+        text='minus'
+      />
+
+      <Button
+        onClick={setToZero}
+        text='zero'
+      />
+
       <Button
         onClick={increaseByOne}
         text='plus'
       />
-      <Button
-        onClick={setToZero}
-        text='zero'
-      />     
-      <Button
-        onClick={decreaseByOne}
-        text='minus'
-      />  
     </div>
   )
 }
 
-export default App
+export default G_PassingStateToChieldComponent

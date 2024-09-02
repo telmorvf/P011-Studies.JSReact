@@ -1,20 +1,17 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-const App = () => {
+const A_ComplexState = () => {
   const [clicks, setClicks] = useState({
-    left: 0, 
+    left: 0,
     right: 0
   })
 
   // const handleLeftClick = () => setClicks({...clicks, left: clicks.left + 1 })
-  const handleLeftClick = () => 
-    setClicks({...clicks, left: clicks.left + 1 })
+  const handleLeftClick = () =>
+    setClicks({ ...clicks, left: clicks.left + 1 })
 
   const handleRightClick = () => {
-    const newClicks = {...clicks, right: clicks.right + 1 }
+    const newClicks = { ...clicks, right: clicks.right + 1 }
     setClicks(newClicks)
   }
 
@@ -27,4 +24,4 @@ const App = () => {
     </div>
   )
 }
-export default App
+export default A_ComplexState
