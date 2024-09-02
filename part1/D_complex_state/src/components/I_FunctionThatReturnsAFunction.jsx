@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-const App = () => {
+
+const I_FunctionThatReturnsAFunction = () => {
+
   const [value, setValue] = useState(10)
   const [value1, setValue1] = useState(10)
 
@@ -17,9 +16,14 @@ const App = () => {
     setValue1(newValue1)
   }
 
+
   return (
     <div>
+      <hr />
+      <h2>=  I_FunctionThatReturnsAFunction =</h2>
+
       {value}
+      <br />
       <button onClick={() => setToValue(1000)}>
         thousand
       </button>
@@ -29,10 +33,12 @@ const App = () => {
       <button onClick={() => setToValue(value + 1)}>
         increment
       </button>
-      <br/>
+
+      <br />
       <p>Or</p>
-      <br/>
+
       {value1}
+      <br />
       <button onClick={setToValue1(1000)}>thousand</button>
       <button onClick={setToValue1(0)}>reset</button>
       <button onClick={setToValue1(value1 + 1)}>increment</button>
@@ -41,4 +47,4 @@ const App = () => {
 }
 
 
-export default App
+export default I_FunctionThatReturnsAFunction

@@ -6,7 +6,6 @@ const A_ComplexState = () => {
     right: 0
   })
 
-  // const handleLeftClick = () => setClicks({...clicks, left: clicks.left + 1 })
   const handleLeftClick = () =>
     setClicks({ ...clicks, left: clicks.left + 1 })
 
@@ -17,6 +16,9 @@ const A_ComplexState = () => {
 
   return (
     <div>
+      <hr />
+      <h2>= A_Complex State [useState] =</h2>
+
       {clicks.left}
       <button onClick={handleLeftClick}>left</button>
       <button onClick={handleRightClick}>right</button>
