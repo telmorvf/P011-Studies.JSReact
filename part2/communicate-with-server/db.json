@@ -13,12 +13,17 @@
     {
       "id": "3",
       "content": ".json GET e POST são os métodos mais importantes do protocolo HTTP",
-      "important": false
+      "important": true
     },
     {
       "id": "080c",
       "content": ".json telmo via front-end via localhost:5173 ",
-      "important": false
+      "important": true
+    },
+    {
+      "id": "6129",
+      "content": "Hello! my name is Telmo",
+      "important": true
     }
   ]
 }

@@ -16,16 +16,11 @@ const update = (id, newObject) => {
   return request.then(response => response.data)
 }
 
-const updateOLD = (id, newObject) => {
-  const request = axios.put(`${baseUrl}/100`, newObject)
-  return request.then(response => response.data)
-}
-
 // export default { 
 //   getAll: getAll, 
 //   create: create, 
 //   update: update 
 // }
 
-// OU
+// OU da forma acima podemos dar um nome, mas sendo igual não é necessário repetir
 export default {getAll, create, update}

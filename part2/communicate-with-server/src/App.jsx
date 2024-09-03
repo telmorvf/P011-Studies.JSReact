@@ -1,8 +1,14 @@
+// hooks
 import { useState, useEffect } from 'react'
+
+// services
+import noteService from './services/notes'
+
+// components
 import Note from './components/Note'
 import Footer from './components/Footer'
 import Notification from './components/Notification'
-import noteService from './services/notes'
+
 
 const App = () => {
   const [notes, setNotes] = useState(null)
@@ -19,31 +25,33 @@ const App = () => {
   }, [])
 
   // conditional rendering: do not render anything if notes is still null
-  if (!notes) { 
-    return null 
+  if (!notes) {
+    return null
+  }
+
+
+  const handleNoteChange = (event) => {
+    setNewNote(event.target.value)
   }
 
   const addNote = (event) => {
-    if (newNote !== ''){
+    if (newNote !== '') {
       event.preventDefault()
       const noteObject = {
         content: newNote,
         important: Math.random() > 0.5,
         // id: notes.length + 1,
       }
-      
+
       noteService
-      .create(noteObject)
-      .then(returnedNote => {
-        setNotes(notes.concat(returnedNote))
-        setNewNote('')
-      })
+        .create(noteObject)
+        .then(returnedNote => {
+          setNotes(notes.concat(returnedNote))
+          setNewNote('')
+        })
     }
   }
 
-  const handleNoteChange = (event) => {
-    setNewNote(event.target.value)
-  }
 
   const notesToShow = (showAll
     ? notes
@@ -66,27 +74,26 @@ const App = () => {
         setTimeout(() => {
           setErrorMessage(null)
         }, 5000)
-        
 
         setNotes(notes.filter(n => n.id !== id))
       })
   }
-  
+
   return (
     <div>
       <h1>Notes</h1>
       <Notification message={errorMessage} />
       <div>
         <button onClick={() => setShowAll(!showAll)}>
-          show {showAll ? 'important' : 'all' }
+          show {showAll ? 'important' : 'all'}
         </button>
-      </div> 
+      </div>
       <ul>
         <ul>
-          {notesToShow.map(note => 
-            <Note 
-              key={note.id} 
-              note={note} 
+          {notesToShow.map(note =>
+            <Note
+              key={note.id}
+              note={note}
               toggleImportance={() => toggleImportanceOf(note.id)}
             />
           )}
